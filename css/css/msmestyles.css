@@ -1,0 +1,466 @@
+
+
+
+
+nav ul {
+	list-style: none;
+margin-left: 1000PX;
+	padding: 10;
+	display: flex;
+	justify-content: space-between;
+}
+
+nav li {
+	margin-right: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2em;
+}
+
+
+h1, h2, h3 {
+	color: #333;
+	margin-bottom: 10px;
+}
+
+video {
+	width: 100%;
+	height: 300px;
+	margin-bottom: 20px;
+}
+
+resource-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+resource-list li {
+	margin-bottom: 10px;
+}
+
+resource-list a {
+	color: #337ab7;
+	text-decoration: none;
+}
+
+contact-form {
+	margin-top: 20px;
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+input, textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+button[type="submit"] {
+	background-color: #337ab7;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button[type="submit"]:hover {
+	background-color: #23527c;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.msme-profile {
+    background-color: #ffffff;
+    color: #000080;
+    padding: 50px 0;
+}
+
+.msme-profile .container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.msme-profile .profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.msme-profile .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 5px solid #000080;
+}
+
+.msme-profile h2 {
+    font-size: 2.5em;
+    color: #000080;
+    margin-bottom: 20px;
+}
+
+.msme-profile .profile-content h3 {
+    font-size: 2em;
+    color: #000080;
+    margin-bottom: 20px;
+}
+
+.msme-profile .responsibilities, .msme-profile .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.msme-profile .responsibility, .msme-profile .service {
+    width: 45%;
+    margin: 10px 2.5%;
+    padding: 15px;
+    background: #f0f8ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    animation: slideIn 1s ease-in-out;
+}
+
+.msme-profile .responsibility:nth-child(odd), .msme-profile .service:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+.msme-profile .responsibility:nth-child(even), .msme-profile .service:nth-child(even) {
+    animation-delay: 0.4s;
+}
+
+.msme-profile .responsibility .icon {
+    font-size: 2em;
+    margin-right: 15px;
+}
+
+.msme-profile .responsibility p, .msme-profile .service p {
+    margin: 0;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.msme-profile .service-icon img {
+    width: 140px;
+    height: 140px;
+    margin-right: 15px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.schemes-benefits {
+    background-color: #ffffff;
+    color: #000080;
+    padding: 50px 0;
+}
+
+.schemes-benefits .container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.schemes-benefits h3 {
+    font-size: 2em;
+    color: #000080;
+    margin-bottom: 20px;
+}
+
+.schemes-benefits .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.schemes-benefits .service {
+    width: 30%;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f0f8ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slideIn 1s ease-in-out;
+    position: relative;
+}
+
+.schemes-benefits .service .service-icon img {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 10px;
+}
+
+.schemes-benefits .service p {
+    margin: 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.schemes-benefits .service .video-frame {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    display: none;
+}
+
+.schemes-benefits .service .video-frame iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.schemes-benefits .service:hover .video-frame {
+    display: block;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.schemes-benefits {
+    background-color: #ffffff;
+    color: #000080;
+    padding: 50px 0;
+}
+
+.schemes-benefits .container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.schemes-benefits h3 {
+    font-size: 2em;
+    color: #000080;
+    margin-bottom: 20px;
+}
+
+.schemes-benefits .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.schemes-benefits .service {
+    width: 30%;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f0f8ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+.schemes-benefits .service .service-icon img {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 10px;
+}
+
+.schemes-benefits .service .service-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.schemes-benefits .service .service-details {
+    display: none;
+    text-align: left;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.schemes-benefits .service:hover .service-details {
+    display: block;
+}
+
+.schemes-benefits .service .faq-title {
+    font-size: 1.1em;
+    color: #000080;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.schemes-benefits .service .faq-content {
+    display: none;
+    margin-top: 5px;
+}
+
+.schemes-benefits .service .faq-content p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* CIMSME brand colors */
+.schemes-benefits .service {
+    background: #E6F7FF;
+}
+
+.schemes-benefits .service .faq-title:hover {
+    color: #1A73E8;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.schemes-benefits {
+    background-color: #ffffff;
+    color: #000080;
+    padding: 50px 0;
+}
+
+.schemes-benefits .container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.schemes-benefits h3 {
+    font-size: 2em;
+    color: #000080;
+    margin-bottom: 20px;
+}
+
+.schemes-benefits .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.schemes-benefits .service {
+    width: 30%;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #E6F7FF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+.schemes-benefits .service .service-icon img {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 10px;
+}
+
+.schemes-benefits .service .service-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.schemes-benefits .service .service-details {
+    display: none;
+    text-align: left;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.schemes-benefits .service:hover .service-details {
+    display: block;
+}
+
+.schemes-benefits .service .details-title {
+    font-size: 1.1em;
+    color: #000080;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.schemes-benefits .service .details-content {
+    display: none;
+    margin-top: 5px;
+}
+
+.schemes-benefits .service .details-content p,
+.schemes-benefits .service .details-content ul {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* CIMSME brand colors */
+.schemes-benefits .service {
+    background: #E6F7FF;
+}
+
+.schemes-benefits .service .details-title:hover {
+    color: #1A73E8;
+}
