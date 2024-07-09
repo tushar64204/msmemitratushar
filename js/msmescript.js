@@ -55,3 +55,18 @@ form.addEventListener('submit', event => {
             content.style.display = content.style.display === 'block' ? 'none' : 'block';
         });
     });
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('header, section');
+    
+        window.addEventListener('scroll', function() {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.5;
+    
+                if (sectionTop < screenPosition) {
+                    section.classList.add('active');
+                }
+            });
+        });
+    });
+    
