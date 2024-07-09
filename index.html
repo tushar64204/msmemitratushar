@@ -139,9 +139,12 @@
         </div>
     </header>
 	<main>
+
 		<section id="home">
+			<section class="containertop">
 			<h1>Welcome to MSME Mitra</h1>
 			<p>Your partner in growth</p>
+			</section>
 			<section class="msme-profile">
 				<div class="container">
 					<div class="profile-header">
@@ -357,6 +360,85 @@
 		
 
 	</main>
+	
+	<div class="section-with-background">
+	<div class="form-container">
+		
+		<!-- Scheme Enquiry Form -->
+		<div class="containerqabox">
+			<h2>Scheme Enquiry Form</h2>
+			<form id="enquiryForm" action="https://formspree.io/f/xyzgyryb" method="POST">
+				<div class="form-group">
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name" required>
+				</div>
+				<div class="form-group">
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required>
+				</div>
+				<div class="form-group">
+					<label for="phone">Phone Number:</label>
+					<input type="tel" id="phone" name="phone" required>
+				</div>
+				<div class="form-group">
+					<label for="businessType">Type of Business:</label>
+					<select id="businessType" name="businessType" required>
+						<option value="">Select...</option>
+						<option value="Micro">Micro Business</option>
+						<option value="Small">Small Business</option>
+						<option value="Medium">Medium Business</option>
+						<option value="Startup">Startup (Yet to start)</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="scheme">Scheme of Interest:</label>
+					<select id="scheme" name="scheme" required>
+						<option value="">Select...</option>
+						<option value="Secured Loan">Secured Loan</option>
+						<option value="Unsecured Loan">Unsecured Loan</option>
+						<option value="Machinery Loan">Machinery Loan</option>
+						<option value="Home Loan">Home Loan</option>
+						<option value="Personal Loan">Personal Loan</option>
+						<option value="Vehicles Loan">Vehicles Loan</option>
+						<option value="ZED Certification">ZED Certification</option>
+						<option value="ONDC Registration">ONDC Registration</option>
+						<option value="Insurance Schemes">Insurance Schemes</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="comment">Comments:</label>
+					<textarea id="comment" name="comment" rows="4"></textarea>
+				</div>
+				<button type="button" onclick="previewForm()">Preview</button>
+				<button type="submit">Submit</button>
+			</form>
+			<p>We will be in touch with you shortly, likely during the upcoming weekend, Saturday or Sunday. </p>
+	
+		</div>
+	</div>
+	</div>
+	   <script>
+		   function previewForm() {
+			   // Create a new window to preview the form data
+			   var form = document.getElementById('enquiryForm');
+			   var formData = new FormData(form);
+			   
+			   var previewWindow = window.open('', '_blank');
+			   previewWindow.document.write('<html><head><title>Enquiry Preview</title></head><body>');
+			   previewWindow.document.write('<h2>Enquiry Preview</h2>');
+			   previewWindow.document.write('<p><strong>Name:</strong> ' + formData.get('name') + '</p>');
+			   previewWindow.document.write('<p><strong>Email:</strong> ' + formData.get('email') + '</p>');
+			   previewWindow.document.write('<p><strong>Phone Number:</strong> ' + formData.get('phone') + '</p>');
+			   previewWindow.document.write('<p><strong>Type of Business:</strong> ' + formData.get('businessType') + '</p>');
+			   previewWindow.document.write('<p><strong>Scheme of Interest:</strong> ' + formData.get('scheme') + '</p>');
+			   previewWindow.document.write('<p><strong>Comments:</strong><br>' + formData.get('comment') + '</p>');
+			   previewWindow.document.write('</body></html>');
+		   }
+	   </script>
+	   
+	   
+	   
+	
 	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-3">
@@ -428,130 +510,12 @@
    </section>
   
  
-	   <h3>Scheme Enquiry Form</h3>
-	   <style>
-		   /* Basic styling for demonstration */
-		
-		   .containerqabox {
-			   max-width: 600px;
-			   margin: 0 auto;
-			   background: #fff;
-			   padding: 20px;
-			   border-radius: 8px;
-			   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-		   }
-		   .form-group {
-			   margin-bottom: 20px;
-		   }
-		   label {
-			   font-weight: bold;
-			   display: block;
-			   margin-bottom: 5px;
-		   }
-		   input[type="text"],
-		   input[type="email"],
-		   input[type="tel"],
-		   select {
-			   width: 100%;
-			   padding: 10px;
-			   border: 1px solid #ccc;
-			   border-radius: 4px;
-			   box-sizing: border-box;
-			   font-size: 16px;
-		   }
-		   button {
-			   background-color: #4CAF50;
-			   color: white;
-			   padding: 12px 20px;
-			   border: none;
-			   border-radius: 4px;
-			   cursor: pointer;
-			   font-size: 16px;
-		   }
-		   button:hover {
-			   background-color: #45a049;
-		   }
-	   </style>
-  
-   
-   <div class="containerqabox">
-	   <h2>Scheme Enquiry Form</h2>
-	   <form id="enquiryForm" action="submit_enquiry.php" method="post">
-		   <div class="form-group">
-			   <label for="name">Name:</label>
-			   <input type="text" id="name" name="name" required>
-		   </div>
-		   <div class="form-group">
-			   <label for="email">Email:</label>
-			   <input type="email" id="email" name="email" required>
-		   </div>
-		   <div class="form-group">
-			   <label for="phone">Phone Number:</label>
-			   <input type="tel" id="phone" name="phone" required>
-		   </div>
-		   <div class="form-group">
-			   <label for="businessType">Type of Business:</label>
-			   <select id="businessType" name="businessType" required>
-				   <option value="">Select...</option>
-				   <option value="Micro">Micro Business</option>
-				   <option value="Small">Small Business</option>
-				   <option value="Medium">Medium Business</option>
-				   <option value="Startup">Startup (Yet to start)</option>
-			   </select>
-		   </div>
-		   <div class="form-group">
-			   <label for="scheme">Scheme of Interest:</label>
-			   <select id="scheme" name="scheme" required>
-				   <option value="">Select...</option>
-				   <option value="Secured Loan">Secured Loan</option>
-				   <option value="Unsecured Loan">Unsecured Loan</option>
-				   <option value="Machinery Loan">Machinery Loan</option>
-				   <option value="Home Loan">Home Loan</option>
-				   <option value="Personal Loan">Personal Loan</option>
-				   <option value="Vehicles Loan">Vehicles Loan</option>
-				   <option value="ZED Certification">ZED Certification</option>
-				   <option value="ONDC Registration">ONDC Registration</option>
-				   <option value="Insurance Schemes">Insurance Schemes</option>
-			   </select>
-		   </div>
-		   <div class="form-group">
-			   <label for="comment">Comments:</label>
-			   <textarea id="comment" name="comment" rows="4"></textarea>
-		   </div>
-		   <button type="button" onclick="previewForm()">Preview</button>
-	   </form>
-   </div>
-   
-   <script>
-	   function previewForm() {
-		   // Create a new window to preview the form data
-		   var form = document.getElementById('enquiryForm');
-		   var formData = new FormData(form);
-		   
-		   var previewWindow = window.open('', '_blank');
-		   previewWindow.document.write('<html><head><title>Enquiry Preview</title></head><body>');
-		   previewWindow.document.write('<h2>Enquiry Preview</h2>');
-		   previewWindow.document.write('<p><strong>Name:</strong> ' + formData.get('name') + '</p>');
-		   previewWindow.document.write('<p><strong>Email:</strong> ' + formData.get('email') + '</p>');
-		   previewWindow.document.write('<p><strong>Phone Number:</strong> ' + formData.get('phone') + '</p>');
-		   previewWindow.document.write('<p><strong>Type of Business:</strong> ' + formData.get('businessType') + '</p>');
-		   previewWindow.document.write('<p><strong>Scheme of Interest:</strong> ' + formData.get('scheme') + '</p>');
-		   previewWindow.document.write('<p><strong>Comments:</strong><br>' + formData.get('comment') + '</p>');
-		   previewWindow.document.write('</body></html>');
-	   }
-   </script>
-   
-   
-   
-	  
 	   <footer class="ftco-footer ftco-section">
 		  <div class="container">
 			<div class="row">
 			  <div class="col-md-12 text-center">
 	
-				<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	  <!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
-	  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+				
 			  </div>
 			</div>
 		  </div>

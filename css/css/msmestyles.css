@@ -555,3 +555,96 @@ header#discipline-section.active, section#awareness-section.active {
     opacity: 1;
     transform: translateY(0);
 }
+
+.form-container {
+    position: relative;
+    z-index: 10;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 50px auto; /* Adjust margin for top spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(100% - 100px); /* Ensure the form is scrollable if it overflows the viewport */
+}
+
+.containerqabox h2 {
+    color: #007bff; /* Blue color for headings */
+    text-align: center;
+
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    text-align: left;
+    color: #007bff; /* Blue color for labels */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #007bff; /* Blue border */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2aebe1; /* Blue background for buttons */
+    color: rgb(65, 59, 59);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+.video-background {
+    position: fixed;
+    width: 10vw; /* Set the width to the full viewport width */
+    height: 10vh; /* Set the height to the full viewport height */
+    object-fit: cover; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the video is behind all other content */
+    overflow: hidden;
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.containertop {
+    background-color: #333;
+}
+.section-with-background {
+    background-image: url('bg_1.jpg');
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    /* Optionally, you can add more background properties like position */
+    padding: 50px; /* Adjust padding as needed */
+    text-align: center; /* Center content within the section */
+    color: #fff; /* Text color for better contrast */
+}

@@ -69,4 +69,16 @@ form.addEventListener('submit', event => {
             });
         });
     });
+    function previewForm() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const businessType = document.getElementById('businessType').value;
+        const scheme = document.getElementById('scheme').value;
+        const comment = document.getElementById('comment').value;
+    
+        alert(
+            `Preview:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nType of Business: ${businessType}\nScheme of Interest: ${scheme}\nComments: ${comment}`
+        );
+    }
     
