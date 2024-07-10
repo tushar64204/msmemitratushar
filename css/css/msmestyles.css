@@ -820,7 +820,7 @@ header#discipline-section .content, section#awareness-section .content {
 
 header#discipline-section .text-content, section#awareness-section .text-content {
     max-width: 50%;
-    animation: fadeInLeft 2s ease-out;
+    animation: fadeInLeft 0.5s ease-out;
 }
 
 header#discipline-section .image-content, section#awareness-section .image-content {
