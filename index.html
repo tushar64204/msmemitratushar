@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>MSME Mitra | Your Partner in Growth</title>
 	<link rel="stylesheet" href="css/css/msmestyles.css">
+	
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
@@ -21,7 +22,8 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
 
 
 <style>
@@ -118,41 +120,193 @@
 		<nav>
 			<ul>
 				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
 				<li><a href="#schemes">Schemes</a></li>
-				<li><a href="#resources">Resources</a></li>
+				<li><a href="#enquiry">Enquiry</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
 	</header>
+
+
+    
+
+
 	<header id="discipline-section">
+		
+			
+				
         <div class="content">
             <div class="text-content">
-                <h2 class="animated-heading">Discipline: The Bridge Between Dreams and Reality</h2>
+				
+				<h2 class="animated-heading" class="headline">Discipline: The Bridge Between<span class="highlight">Dreams</span> and <span class="highlight">Reality</span></h2>
+                
                 <p>Without it, even the best ideas remain just that - ideas.</p>
                 <p>Are you ready to transform your ideas into reality? I am here to help you on this journey. As your dedicated MSME Mitra, I am committed to supporting your business growth.</p>
-                <h3>About MSME Mitra Tushar</h3>
+              
+				<h3 class="animated-heading" class="headline">About<span class="highlight">MSME Mitra</span> Tushar</h3>
+
                 <p>Working at the Chamber of Indian Micro Small & Medium Enterprises (CIMSME). Together, we can bridge the gap between your dreams and reality, ensuring your ideas flourish into successful ventures.</p>
+				
             </div>
             <div class="image-content">
+				<div id="hanging-icon">
+					<div class="rope"></div>
+					<a href="#enquiry">
+						<img src="images/handmsme.png" alt="Hanging Icon" class="icon1">
+					</a>
+				</div>
                 <img src="images/MSME.png" alt="CIMSME Logo">
+				<br><br> 
+				<div class="container">
+					<a href="#enquiry" class="enquire-button">Enquire Now</a>
             </div>
+			
         </div>
+		
     </header>
-	<main>
+	
+		
+	
 
+	<main>
+		<div class="whatsapp">
+			<a href="https://wa.me/919817409607" target="_blank"> <!-- Replace the href with your WhatsApp link -->
+				<!-- You can use a WhatsApp icon image or any text/icon of your choice -->
+			<img src="images/whatsapp_icon.png" width="50" height="50">
+		  </a>
+		</div>
 		<section id="home">
 			<section class="containertop">
 			<h1>Welcome to MSME Mitra</h1>
 			<p>Your partner in growth</p>
 			</section>
+
 			<section class="msme-profile">
 				<div class="container">
 					<div class="profile-header">
-						<img src="images/bg_1.png" alt="Your Photo" class="profile-photo">
-						<h2>MSME Mitra Tushar</h2>
+						<!DOCTYPE html>
+
+    <style>
+        .profile-photo {
+            cursor: pointer;
+            width: 100px; /* Adjust size as needed */
+            height: auto;
+            border-radius: 50%;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 60px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+        }
+
+        /* Modal Content (Image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image */
+        .caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation - Zoom in the Modal */
+        .modal-content, .caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {-webkit-transform:scale(0)}
+            to {-webkit-transform:scale(1)}
+        }
+
+        @keyframes zoom {
+            from {transform:scale(0)}
+            to {transform:scale(1)}
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <section id="schemes" class="schemes-benefits">
+        <div class="container">
+            <img src="images/bg_1.png" alt="Tushar" class="profile-photo" id="myImg">
+			<h2>MSME Mitra Tushar</h2>
 					</div>
 					<div class="profile-content">
 						<h3>What I Can Do for MSMEs</h3>
+        </div>
+    </section>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div class="caption" id="caption"></div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+    </script>
+						
 				
 						<div class="responsibilities">
 							<div class="responsibility">
@@ -193,6 +347,7 @@
 			</section>
 			
 		</section>
+		<section id="about">
 		<section id="awareness-section">
 			<div class="content">
 				<div class="text-content">
@@ -205,162 +360,394 @@
 				</div>
 			</div>
 		</section>
-		<section class="schemes-benefits">
-			<div class="container">
-				<h3>Schemes and Benefits</h3>
-				<div class="services">
-					<div class="service">
-						<div class="service-icon">
-							<img src="images/sl.jpg" alt="Secured Loan">
-						</div>
-						<p>Secured Loan</p>
-						<div class="video-frame">
-							<iframe src="https://www.youtube.com/embed/video-id-1?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-						</div>
-					</div>
-					<div class="service">
-						<div class="service-icon">
-							<img src="images/ul.jpg" alt="Unsecured Loan">
-						</div>
-						<p>Unsecured Loan</p>
-						<div class="video-frame">
-							<iframe src="https://www.youtube.com/embed/video-id-2?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-						</div>
-					</div>
-					<div class="service">
-						<div class="service-icon">
-							<img src="images/ml.jpg" alt="Machinery Loan">
-						</div>
-						<p>Machinery Loan</p>
-						<div class="video-frame">
-							<iframe src="https://www.youtube.com/embed/video-id-3?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-						</div>
-					</div>
-					<div class="service">
-						<div class="service-icon">
-							<img src="images/hl.jpg" alt="Home Loan">
-						</div>
-						<p>Home Loan</p>
-						<div class="video-frame">
-							<iframe src="https://www.youtube.com/embed/video-id-4?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-						</div>
-					</div>
-					<div class="service">
-						<div class="service-icon">
-							<img src="images/pl.jpg" alt="Personal Loan">
-						</div>
-						<p>Personal Loan</p>
-						<div class="video-frame">
-							<iframe src="https://www.youtube.com/embed/video-id-5?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-						</div>
-					</div>
-					<div class="service">
-						<div class="service-icon">
-							<img src="images/vl.jpg" alt="Vehicles Loan">
-						</div>
-						<p>Vehicles Loan</p>
-						<div class="video-frame">
-							<iframe src="https://www.youtube.com/embed/video-id-6?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-						</div>
-					</div>
-					<div class="service">
-						<div class="service-icon">
-							<img src="images/zed.jpg" alt="ZED Certification">
-						</div>
-						<p>ZED Certification</p>
-						<div class="video-frame">
-							<iframe src="https://www.youtube.com/embed/video-id-7?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-						</div>
-					</div>
-					<div class="service">
-						<div class="service-icon">
-							<img src="images/onboard.jpg" alt="ONDC Registration">
-						</div>
-						<p>ONDC Registration</p>
-						<div class="video-frame">
-							<iframe src="https://www.youtube.com/embed/video-id-8?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-						</div>
-					</div>
-					<div class="service">
-						<div class="service-icon">
-							<img src="images/is.jpg" alt="Insurance Schemes">
-						</div>
-						<p>Insurance Schemes</p>
-						<div class="video-frame">
-							<iframe src="https://www.youtube.com/embed/video-id-9?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+	</section>
+	
+	<section id="schemes" class="schemes-benefits">
 		
-		<section class="schemes-benefits">
-			<div class="container">
-				<h3>Schemes and Benefits</h3>
-				<div class="services">
-					<div class="service">
-						<div class="service-icon">
-							<img src="images/sl.jpg" alt="Secured Loan">
-						</div>
-						<p class="service-name">Secured Loan</p>
-						<div class="service-details">
-							<p class="details-title" data-type="about">About Scheme Introduction</p>
-							<div class="details-content about-content">
-								<p>Secured Loan is a loan backed by collateral to reduce the lender's risk.</p>
-							</div>
-							<p class="details-title" data-type="faq">FAQ</p>
-							<div class="details-content faq-content">
-								<p>Q1: What is a Secured Loan?</p>
-								<p>A1: A secured loan is a loan backed by collateral.</p>
-								<!-- Add more FAQs as needed -->
-							</div>
-							<p class="details-title" data-type="documents">Required Documents</p>
-							<div class="details-content documents-content">
-								<ul>
-									<li>ID Proof</li>
-									<li>Address Proof</li>
-									<li>Collateral Documents</li>
-									<!-- Add more documents as needed -->
-								</ul>
-							</div>
-						</div>
+		<div class="container">
+			<h3>Schemes and Benefits</h3>
+			<div class="services">
+				<div class="service">
+					<div class="service-icon">
+						<img src="images/sl.jpg" alt="Secured Loan">
 					</div>
-					<!-- Repeat similar structure for other services -->
-					<div class="service">
-						<div class="service-icon">
-							<img src="images/ul.jpg" alt="Unsecured Loan">
-						</div>
-						<p class="service-name">Unsecured Loan</p>
-						<div class="service-details">
-							<p class="details-title" data-type="about">About Scheme Introduction</p>
-							<div class="details-content about-content">
-								<p>An unsecured loan is a loan that does not require collateral.</p>
-							</div>
-							<p class="details-title" data-type="faq">FAQ</p>
-							<div class="details-content faq-content">
-								<p>Q1: What is an Unsecured Loan?</p>
-								<p>A1: An unsecured loan is a loan that does not require collateral.</p>
-								<!-- Add more FAQs as needed -->
-							</div>
-							<p class="details-title" data-type="documents">Required Documents</p>
-							<div class="details-content documents-content">
-								<ul>
-									<li>ID Proof</li>
-									<li>Address Proof</li>
-									<li>Income Proof</li>
-									<!-- Add more documents as needed -->
-								</ul>
-							</div>
-						</div>
+					<p>Secured Loan</p>
+					<div class="video-frame">
+						<iframe src="https://www.youtube.com/embed/X9xJITIsdgs?si=mN2F0aYwBvIr1e2a" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 					</div>
-					<!-- Add other services similarly -->
+				</div>
+				<div class="service">
+					<div class="service-icon">
+						<img src="images/ul.jpg" alt="Unsecured Loan">
+					</div>
+					<p>Unsecured Loan</p>
+					<div class="video-frame">
+						<iframe src="https://www.youtube.com/embed/X9xJITIsdgs?si=mN2F0aYwBvIr1e2a" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="service">
+					<div class="service-icon">
+						<img src="images/ml.jpg" alt="Machinery Loan">
+					</div>
+					<p>Machinery Loan</p>
+					<div class="video-frame">
+						<iframe src="https://www.youtube.com/embed/X9xJITIsdgs?si=mN2F0aYwBvIr1e2a" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="service">
+					<div class="service-icon">
+						<img src="images/hl.jpg" alt="Home Loan">
+					</div>
+					<p>Home Loan</p>
+					<div class="video-frame">
+						<iframe src="https://www.youtube.com/embed/X9xJITIsdgs?si=mN2F0aYwBvIr1e2a" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="service">
+					<div class="service-icon">
+						<img src="images/pl.jpg" alt="Personal Loan">
+					</div>
+					<p>Personal Loan</p>
+					<div class="video-frame">
+						<iframe src="https://www.youtube.com/embed/X9xJITIsdgs?si=mN2F0aYwBvIr1e2a" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="service">
+					<div class="service-icon">
+						<img src="images/vl.jpg" alt="Vehicles Loan">
+					</div>
+					<p>Vehicles Loan</p>
+					<div class="video-frame">
+						<iframe src="https://www.youtube.com/embed/X9xJITIsdgs?si=mN2F0aYwBvIr1e2a" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="service">
+					<div class="service-icon">
+						<img src="images/zed.jpg" alt="ZED Certification">
+					</div>
+					<p>ZED Certification</p>
+					<a href="https://zed.msme.gov.in/documents">Documents Requirement: Official Website</a>
+					<div class="video-frame">
+						<iframe src="https://www.youtube.com/embed/Zgn3B3I1hag?si=_F_DCW45puTqB-A3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="service">
+					<div class="service-icon">
+						<img src="images/onboard.jpg" alt="ONDC Registration">
+					</div>
+					<p>ONDC Registration</p>
+					<div class="video-frame">
+						<iframe src="https://www.youtube.com/embed/lp7FWJi47Yc?si=YsZFj9o7_cojHwPo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="service">
+					<div class="service-icon">
+						<img src="images/is.jpg" alt="Insurance Schemes">
+					</div>
+					<p>Insurance Schemes</p>
+					<div class="video-frame">
+						<iframe src="https://www.youtube.com/embed/R5Bihd8ZsYc?si=6nKdibGeQqtgsc3_" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
+	
+	<section id="schemes" class="schemes-benefits">
+		<div class="container">
+			<h3>Required Documents</h3>
+			<div class="services">
+				<div class="service">
+					<div class="service-icon">
+						<img src="images/sl.jpg" alt="Secured Loan">
+					</div>
+					<p class="service-name"><a href="securedloan.html" target="_blank">Secured Loan</a></p>
+					<div class="service-details">
+						<p class="details-title" data-type="about">About Scheme Introduction</p>
+						<div class="details-content about-content">
+							<p>Secured Loan is a loan backed by collateral to reduce the lender's risk.</p>
+						</div>
+						<p class="details-title" data-type="faq">FAQ</p>
+						<div class="details-content faq-content">
+							<p>Q1: What is a Secured Loan?</p>
+							<p>A1: A secured loan is a loan backed by collateral.</p>
+						</div>
+						<p class="details-title" data-type="documents">Required Documents
+							<a href="securedloan.html" target="_blank">more detalis</a>
+						</p>
+					
+						
+						<div class="details-content documents-content">
+							<ul>
+								<li>ID Proof</li>
+								<li>Address Proof</li>
+								<li>Collateral Documents</li>
+							</ul>
+						</div>
+					</div>
+					<!-- <div class="video-frame">
+						<iframe src="https://www.youtube.com/embed/X9xJITIsdgs?si=mN2F0aYwBvIr1e2a" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div> -->
+				</div>
+	
+				<div class="service">
+					<div class="service-icon">
+						<img src="images/ul.jpg" alt="Unsecured Loan">
+					</div>
+					<p class="service-name"><p class="service-name"><a href="unsecuredloan.html" target="_blank">Unsecured Loan</a></p>
+				</p>
+					<div class="service-details">
+						<p class="details-title" data-type="about">About Scheme Introduction</p>
+						<div class="details-content about-content">
+							<p>Unsecured Loan is a loan not backed by collateral.</p>
+						</div>
+						<p class="details-title" data-type="faq">FAQ</p>
+						<div class="details-content faq-content">
+							<p>Q1: What is an Unsecured Loan?</p>
+							<p>A1: An unsecured loan is a loan not backed by collateral.</p>
+						</div>
+						<p class="details-title" data-type="documents">Required Documents
+							<a href="unsecuredloan.html" target="_blank">more detalis</a>
+						</p>
+						<div class="details-content documents-content">
+							<ul>
+								<li>ID Proof</li>
+								<li>Address Proof</li>
+								<li>Income Proof</li>
+							</ul>
+						</div>
+					</div>
+					<!-- <div class="video-frame">
+						<iframe src="https://www.youtube.com/embed/X9xJITIsdgs?si=mN2F0aYwBvIr1e2a" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div> -->
+				</div>
+	
+				<div class="service">
+					<div class="service-icon">
+						<img src="images/ml.jpg" alt="Machinery Loan">
+					</div>
+					<p class="service-name"><a href="machineryloan.html" target="_blank">Machinery Loan</a></p>
+					<div class="service-details">
+						<p class="details-title" data-type="about">About Scheme Introduction</p>
+						<div class="details-content about-content">
+							<p>Machinery Loan helps businesses purchase necessary machinery.</p>
+						</div>
+						<p class="details-title" data-type="faq">FAQ</p>
+						<div class="details-content faq-content">
+							<p>Q1: What is a Machinery Loan?</p>
+							<p>A1: A machinery loan helps businesses purchase necessary machinery.</p>
+						</div>
+						<p class="details-title" data-type="documents">Required Documents
+							<a href="machineryloan.html" target="_blank">more detalis</a>
+						</p>
+						<div class="details-content documents-content">
+							<ul>
+								<li>ID Proof</li>
+								<li>Address Proof</li>
+								<li>Quotation from Machinery Supplier</li>
+							</ul>
+						</div>
+					</div>
+					<!-- <div class="video-frame">
+						<iframe src="https://www.youtube.com/embed/X9xJITIsdgs?si=mN2F0aYwBvIr1e2a" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div> -->
+				</div>
+	
+				<div class="service">
+					<div class="service-icon">
+						<img src="images/hl.jpg" alt="Home Loan">
+					</div>
+					<p class="service-name"><a href="homeloan.html" target="_blank">Home Loan</a></p>
+					<div class="service-details">
+						<p class="details-title" data-type="about">About Scheme Introduction</p>
+						<div class="details-content about-content">
+							<p>Home Loan helps individuals purchase their dream home.</p>
+						</div>
+						<p class="details-title" data-type="faq">FAQ</p>
+						<div class="details-content faq-content">
+							<p>Q1: What is a Home Loan?</p>
+							<p>A1: A home loan helps individuals purchase their dream home.</p>
+						</div>
+						<p class="details-title" data-type="documents">Required Documents
+							<a href="homeloan.html" target="_blank">more detalis</a>
+						</p>
+						<div class="details-content documents-content">
+							<ul>
+								<li>ID Proof</li>
+								<li>Address Proof</li>
+								<li>Income Proof</li>
+								<li>Property Documents</li>
+							</ul>
+						</div>
+					</div>
+					<!-- <div class="video-frame">
+						<iframe src="https://www.youtube.com/embed/X9xJITIsdgs?si=mN2F0aYwBvIr1e2a" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div> -->
+				</div>
+	
+				<div class="service">
+					<div class="service-icon">
+						<img src="images/pl.jpg" alt="Personal Loan">
+					</div>
+					<p class="service-name"><a href="personalloan.html" target="_blank">Personal Loan</a></p>
+					<div class="service-details">
+						<p class="details-title" data-type="about">About Scheme Introduction</p>
+						<div class="details-content about-content">
+							<p>Personal Loan provides financial aid for personal needs.</p>
+						</div>
+						<p class="details-title" data-type="faq">FAQ</p>
+						<div class="details-content faq-content">
+							<p>Q1: What is a Personal Loan?</p>
+							<p>A1: A personal loan provides financial aid for personal needs.</p>
+						</div>
+						<p class="details-title" data-type="documents">Required Documents
+							<a href="personalloan.html" target="_blank">more detalis</a>
+						</p>
+						<div class="details-content documents-content">
+							<ul>
+								<li>ID Proof</li>
+								<li>Address Proof</li>
+								<li>Income Proof</li>
+							</ul>
+						</div>
+					</div>
+					<!-- <div class="video-frame">
+						<iframe src="https://www.youtube.com/embed/X9xJITIsdgs?si=mN2F0aYwBvIr1e2a" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div> -->
+				</div>
+	
+				<div class="service">
+					<div class="service-icon">
+						<img src="images/vl.jpg" alt="Vehicles Loan">
+					</div>
+					<p class="service-name"><a href="vehiclesloan.html" target="_blank">Vehicle Loan</a></p>
+					<div class="service-details">
+						<p class="details-title" data-type="about">About Scheme Introduction</p>
+						<div class="details-content about-content">
+							<p>Vehicles Loan helps individuals or businesses purchase vehicles.</p>
+						</div>
+						<p class="details-title" data-type="faq">FAQ</p>
+						<div class="details-content faq-content">
+							<p>Q1: What is a Vehicles Loan?</p>
+							<p>A1: A vehicles loan helps individuals or businesses purchase vehicles.</p>
+						</div>
+						<p class="details-title" data-type="documents">Required Documents
+							<a href="vehiclesloan.html" target="_blank">more detalis</a>
+						</p>
+						<div class="details-content documents-content">
+							<ul>
+								<li>ID Proof</li>
+								<li>Address Proof</li>
+								<li>Quotation from Vehicle Dealer</li>
+							</ul>
+						</div>
+					</div>
+					<!-- <div class="video-frame">
+						<iframe src="https://www.youtube.com/embed/X9xJITIsdgs?si=mN2F0aYwBvIr1e2a" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div> -->
+				</div>
+	
+				<div class="service">
+					<div class="service-icon">
+						<img src="images/zed.jpg" alt="ZED Certification">
+					</div>
+					<p class="service-name"><a href="zedcertification.html" target="_blank">Zed Certification</a></p>
+					<a href="https://zed.msme.gov.in/documents">Documents Requirement: Official Website</a>
+					<div class="service-details">
+						<p class="details-title" data-type="about">About Scheme Introduction</p>
+						<div class="details-content about-content">
+							<p>ZED Certification provides a holistic framework for MSMEs to improve their efficiency, productivity, and competitiveness.</p>
+						</div>
+						<p class="details-title" data-type="faq">FAQ</p>
+						<div class="details-content faq-content">
+							<p>Q1: What is ZED Certification?</p>
+							<p>A1: ZED Certification is a recognition for MSMEs to improve their efficiency, productivity, and competitiveness.</p>
+						</div>
+						<p class="details-title" data-type="documents">Required Documents
+							<a href="zedcertification.html" target="_blank">more detalis</a>
+						</p>
+						<div class="details-content documents-content">
+							<ul>
+								<li>ID Proof</li>
+								<li>Business Registration Proof</li>
+								<li>Compliance Certificates</li>
+							</ul>
+						</div>
+					</div>
+					<!-- <div class="video-frame">
+						<iframe src="https://www.youtube.com/embed/Zgn3B3I1hag?si=_F_DCW45puTqB-A3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div> -->
+				</div>
+	
+				<div class="service">
+					<div class="service-icon">
+						<img src="images/onboard.jpg" alt="ONDC Registration">
+					</div>
+					<p class="service-name"><a href="ondcregistration.html" target="_blank">ONDC Registration</a></p>
+					<div class="service-details">
+						<p class="details-title" data-type="about">About Scheme Introduction</p>
+						<div class="details-content about-content">
+							<p>ONDC Registration helps businesses register on the Open Network for Digital Commerce.</p>
+						</div>
+						<p class="details-title" data-type="faq">FAQ</p>
+						<div class="details-content faq-content">
+							<p>Q1: What is ONDC Registration?</p>
+							<p>A1: ONDC Registration helps businesses register on the Open Network for Digital Commerce.</p>
+						</div>
+						<p class="details-title" data-type="documents">Required Documents
+							<a href="ondcregistration.html" target="_blank">more detalis</a>
+						</p>
+						<div class="details-content documents-content">
+							<ul>
+								<li>ID Proof</li>
+								<li>Business Registration Proof</li>
+								<li>Bank Account Details</li>
+							</ul>
+						</div>
+					</div>
+					<!-- <div class="video-frame">
+						<iframe src="https://www.youtube.com/embed/lp7FWJi47Yc?si=YsZFj9o7_cojHwPo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div> -->
+				</div>
+	
+				<div class="service">
+					<div class="service-icon">
+						<img src="images/is.jpg" alt="Insurance Schemes">
+					</div>
+					<p class="service-name"><a href="insuranceschemes.html" target="_blank">Insurance Schemes</a></p>
+					<div class="service-details">
+						<p class="details-title" data-type="about">About Scheme Introduction</p>
+						<div class="details-content about-content">
+							<p>Insurance Schemes provide financial protection against unforeseen events.</p>
+						</div>
+						<p class="details-title" data-type="faq">FAQ</p>
+						<div class="details-content faq-content">
+							<p>Q1: What are Insurance Schemes?</p>
+							<p>A1: Insurance schemes provide financial protection against unforeseen events.</p>
+						</div>
+						<p class="details-title" data-type="documents">Required Documents
+							<a href="insuranceschemes.html" target="_blank">more detalis</a>
+						</p>
+						<div class="details-content documents-content">
+							<ul>
+								<li>ID Proof</li>
+								<li>Address Proof</li>
+								<li>Insurance Application Form</li>
+							</ul>
+						</div>
+					</div>
+					<!-- <div class="video-frame">
+						<iframe src="https://www.youtube.com/embed/R5Bihd8ZsYc?si=6nKdibGeQqtgsc3_" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</section>
+	
 		
 
 	</main>
-	
+	<section id="enquiry">
 	<div class="section-with-background">
 	<div class="form-container">
 		
@@ -416,6 +803,7 @@
 	
 		</div>
 	</div>
+	
 	</div>
 	   <script>
 		   function previewForm() {
@@ -435,81 +823,134 @@
 			   previewWindow.document.write('</body></html>');
 		   }
 	   </script>
-	   
-	   
+	</section>
 	   
 	
-	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-		<div class="container">
-			<div class="row justify-content-center mb-5 pb-3">
-			<div class="col-md-7 heading-section text-center ftco-animate">
-			  <h1 class="big big-2">Contact</h1>
-			  <h2 class="mb-4">Contact Me</h2>
-			  <p>Below are the details to reach out to me!</p>
-			</div>
-		  </div>
-  
-		  <div class="row d-flex contact-info mb-5">
-			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-				<div class="align-self-stretch box p-4 text-center">
-					<div class="icon d-flex align-items-center justify-content-center">
-						<span class="icon-map-signs"></span>
-					</div>
-					<h3 class="mb-4">Address</h3>
-					<p>Rohtak, Haryana, India</p>
-				  </div>
-			</div>
-			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-				<div class="align-self-stretch box p-4 text-center">
-					<div class="icon d-flex align-items-center justify-content-center">
-						<span class="icon-phone2"></span>
-					</div>
-					<h3 class="mb-4">Contact Number</h3>
-					<p><a href="tel://9817409607">9817409607</a></p>
-				  </div>
-			</div>
-			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-				<div class="align-self-stretch box p-4 text-center">
-					<div class="icon d-flex align-items-center justify-content-center">
-						<span class="icon-paper-plane"></span>
-					</div>
-					<h3 class="mb-4">Email Address</h3>
-					<p><a href="tushar64204@gmail.com">tushar64204@gmail.com</a></p>
-				  </div>
-			</div>
-			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-				<div class="align-self-stretch box p-4 text-center">
-					<div class="icon d-flex align-items-center justify-content-center">
-						<span class="icon-globe"></span>
-					</div>
-					<h3 class="mb-4">Download Resume</h3>
-					<p><a href="https://drive.google.com/file/d/1U9FZeua2vXVLF6zdcx-JapAN1ylibMDA/view?usp=sharing">resumelink</a></p>
-				  </div>
-			</div>
-  
-			<div class="container">
-			  <br>
-			  <br>
-			  <div class="row justify-content-center">
-				  <div class="col-md-7 ftco-animate text-center">
-					  <h2>Have a<span> Question?  </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLScmK9kz--inQnK6-wE28W3aEETT5msjGuXofe2LKR1HMz3SHw/viewform?usp=sf_linkhttps://docs.google.com/forms/d/e/1FAIpQLScmK9kz--inQnK6-wE28W3aEETT5msjGuXofe2LKR1HMz3SHw/viewform?usp=sf_link" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
-				  </div>
-			  </div>
-				  <br>
-					  <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-						<li class="ftco-animate normal-txt">Find me on  </li>
-						<li class="ftco-animate"><a href="https://youtube.com/@newtrendrla9217?feature=shared"><span class="icon-youtube"></span></a></li>
-						<li class="ftco-animate"><a href="https://www.linkedin.com/in/tushar-kaushik-7a5343137/"><span class="icon-linkedin"></span></a></li>  
-						<li class="ftco-animate"><a href="https://twitter.com/ttusharkkumar"><span class="icon-twitter"></span></a></li>
-						<li class="ftco-animate"><a href="https://educationsystemofbharat.blogspot.com/"><span class="icon-heart"></span></a></li>
-						<li class="ftco-animate"><a href="https://www.instagram.com/tushar01_11/"><span class="icon-instagram"></span></a></li>
-					  </ul>
-				  <br>
-			 </div>
-	 </div>
-   </section>
-  
- 
+    <!-- Font Awesome CSS -->
+    <style>
+        .contact-section {
+            padding: 60px 0;
+        }
+        .heading-section {
+            margin-bottom: 50px;
+        }
+        .big {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .box {
+            border: 1px solid #000000;
+            border-radius: 10px;
+            padding: 20px;
+            background: #000000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #FFD700; /* Yellow color */
+        }
+        .btn {
+            background: #FFD700; /* Yellow background */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        .ftco-footer-social li {
+            list-style: none;
+            margin-right: 10px;
+        }
+        .ftco-footer-social a {
+            color: #FFD700; /* Yellow color */
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+        .ftco-footer-social a:hover {
+            color: #333;
+        }
+    </style>
+
+    <section id="contact">
+        <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+            <div class="container">
+                <div class="row justify-content-center mb-5 pb-3">
+                    <div class="col-md-7 heading-section text-center ftco-animate">
+                        <h1 class="big big-2">Contact</h1>
+                        <h2 class="mb-4">Contact Me</h2>
+                        <p>Below are the details to reach out to me!</p>
+                    </div>
+                </div>
+
+                <div class="row d-flex contact-info mb-5">
+                    <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                        <div class="align-self-stretch box p-4 text-center">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <i class="fas fa-map-signs"></i>
+                            </div>
+                            <h3 class="mb-4">Address</h3>
+                            <p>1106, New Delhi House, Barakhamba Road, Connaught Place, New Delhi- 110001</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                        <div class="align-self-stretch box p-4 text-center">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3 class="mb-4">Contact Number</h3>
+                            <p><a href="tel://9817409607">9817409607</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                        <div class="align-self-stretch box p-4 text-center">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <i class="fas fa-paper-plane"></i>
+                            </div>
+                            <h3 class="mb-4">Email Address</h3>
+                            <p><a href="mailto:msmemitratushar@gmail.com">msmemitratushar@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                        <div class="align-self-stretch box p-4 text-center">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h3 class="mb-4">Download Business Card</h3>
+                            <p><a href="https://drive.google.com/file/d/1nv2gF5kDMUx1oCWmv5vngyq2L_AZTnpu/view?usp=sharing">Business Card</a></p>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <br>
+                        <br>
+                        <div class="row justify-content-center">
+                            <div class="col-md-7 ftco-animate text-center">
+                                <h2>Have a <span>Question?</span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwB1ZNr0KY-Z7jjMfVuFOO0E96kmqUL9EV4amA-anpz3jqBg/viewform?usp=sf_link" class="btn py-3 px-5">Click Here</a></h2>
+                            </div>
+                        </div>
+                        <br>
+                        <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+                            <li class="ftco-animate normal-txt">Some important links</li>
+                            <li class="ftco-animate"><a href="https://www.youtube.com/@MSMEHelpline"><i class="fab fa-youtube"></i></a></li>
+                            <li class="ftco-animate"><a href="https://www.linkedin.com/in/tushar-kaushik-7a5343137/"><i class="fab fa-linkedin"></i></a></li>
+                            <li class="ftco-animate"><a href="https://msmehelpline.com/"><i class="fas fa-globe"></i></a></li>
+                            <li class="ftco-animate"><a href="https://www.facebook.com/MSMEHelpline"><i class="fas fa-heart"></i></a></li>
+                            <li class="ftco-animate"><a href="https://www.instagram.com/msmehelpline"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
 	   <footer class="ftco-footer ftco-section">
 		  <div class="container">
 			<div class="row">

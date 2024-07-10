@@ -4,7 +4,7 @@
 
 nav ul {
 	list-style: none;
-margin-left: 1000PX;
+margin-right: 10PX;
 	padding: 10;
 	display: flex;
 	justify-content: space-between;
@@ -18,12 +18,70 @@ nav a {
 	color: #fff;
 	text-decoration: none;
 }
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        background-color: #333; /* Example background color */
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        z-index: 1000; /* Ensure it's above other content */
+    }
+    
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    
+    nav li {
+        margin-right: 10px;
+    }
+    
+    nav a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
 
 main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding: 2em;
+}
+@media (max-width: 768px) {
+    main {
+        font-size: 14px;
+    }
+
+    .main {
+        width: 25%; /* Two columns on tablet screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .main{
+        width: 100%; /* Full width on smaller screens */
+    }
 }
 
 
@@ -84,6 +142,79 @@ button[type="submit"] {
 button[type="submit"]:hover {
 	background-color: #23527c;
 }
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    video {
+        height: auto; /* Adjust video height to be responsive */
+    }
+/* General styles */
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+video {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+resource-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+resource-list li {
+    margin-bottom: 10px;
+}
+
+resource-list a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+contact-form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"] {
+    background-color: #337ab7;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #23527c;
+}
+
+    input, textarea {
+        margin-bottom: 10px; /* Reduce margin bottom for smaller screens */
+    }
+
+    button[type="submit"] {
+        padding: 10px 15px; /* Adjust button padding for smaller screens */
+    }
+}
+
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -181,6 +312,105 @@ body {
         opacity: 1;
     }
 }
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.msme-profile {
+    background-color: #ffffff;
+    color: #000080;
+    padding: 50px 0;
+}
+
+.msme-profile .container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.msme-profile .profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.msme-profile .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 5px solid #000080;
+}
+
+.msme-profile h2 {
+    font-size: 2.5em;
+    color: #000080;
+    margin-bottom: 20px;
+}
+
+.msme-profile .profile-content h3 {
+    font-size: 2em;
+    color: #000080;
+    margin-bottom: 20px;
+}
+
+.msme-profile .responsibilities, .msme-profile .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.msme-profile .responsibility, .msme-profile .service {
+    width: 100%; /* Full width on mobile screens */
+    margin-bottom: 20px; /* Increased margin bottom for better spacing */
+    padding: 15px;
+    background: #f0f8ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    animation: slideIn 1s ease-in-out;
+}
+
+.msme-profile .responsibility .icon {
+    font-size: 2em;
+    margin-right: 15px;
+}
+
+.msme-profile .responsibility p, .msme-profile .service p {
+    margin: 0;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.msme-profile .service-icon img {
+    width: 100%; /* Full width for service icons on mobile */
+    max-width: 140px; /* Max width for service icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 15px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+    .msme-profile .responsibility, .msme-profile .service {
+        width: 90%; /* Adjust width for better spacing on smaller screens */
+    }
+}
+
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -267,6 +497,102 @@ body {
         opacity: 1;
     }
 }
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.schemes-benefits {
+    background-color: #ffffff;
+    color: #000080;
+    padding: 50px 0;
+}
+
+.schemes-benefits .container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.schemes-benefits h3 {
+    font-size: 2em;
+    color: #000080;
+    margin-bottom: 20px;
+}
+
+.schemes-benefits .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Adjusted to space-around for better mobile layout */
+    margin-bottom: 30px;
+}
+
+.schemes-benefits .service {
+    width: 100%; /* Full width on mobile screens */
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f0f8ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slideIn 1s ease-in-out;
+    position: relative;
+}
+
+.schemes-benefits .service .service-icon img {
+    width: 100%; /* Full width for service icons on mobile */
+    max-width: 140px;
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+}
+
+.schemes-benefits .service p {
+    margin: 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.schemes-benefits .service .video-frame {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    display: none;
+}
+
+.schemes-benefits .service .video-frame iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.schemes-benefits .service:hover .video-frame {
+    display: block;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+    .schemes-benefits .service {
+        width: 90%; /* Adjust width for better spacing on smaller screens */
+    }
+}
+
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -333,7 +659,7 @@ body {
     top: 100%;
     left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 1110;
 }
 
 .schemes-benefits .service:hover .service-details {
@@ -458,7 +784,7 @@ body {
 
 /* CIMSME brand colors */
 .schemes-benefits .service {
-    background: #E6F7FF;
+    background: #0892d1;
 }
 
 .schemes-benefits .service .details-title:hover {
@@ -466,7 +792,7 @@ body {
 }
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: 10;
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
@@ -477,6 +803,7 @@ header#discipline-section, section#awareness-section {
     color: #ffffff;
     padding: 50px 20px;
     display: flex;
+    
     align-items: center;
     justify-content: center;
     text-align: left;
@@ -493,11 +820,12 @@ header#discipline-section .content, section#awareness-section .content {
 
 header#discipline-section .text-content, section#awareness-section .text-content {
     max-width: 50%;
-    animation: fadeInLeft 1s ease-out;
+    animation: fadeInLeft 2s ease-out;
 }
 
 header#discipline-section .image-content, section#awareness-section .image-content {
     max-width: 40%;
+    margin-left: 20%;
 }
 
 header#discipline-section .image-content img, section#awareness-section .image-content img {
@@ -518,7 +846,7 @@ header#discipline-section h3, section#awareness-section h3 {
 }
 
 header#discipline-section p, section#awareness-section p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.6;
     margin: 10px 0;
     color: #e0e0e0;
@@ -555,6 +883,104 @@ header#discipline-section.active, section#awareness-section.active {
     opacity: 1;
     transform: translateY(0);
 }
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header and Section Styles */
+header#discipline-section, section#awareness-section {
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 30px 15px; /* Reduced padding for mobile screens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    min-height: 100vh; /* Ensure full viewport height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header#discipline-section .content, section#awareness-section .content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically on mobile */
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width for mobile screens */
+}
+
+header#discipline-section .text-content, section#awareness-section .text-content {
+    max-width: 100%; /* Full width for text content on mobile */
+    text-align: center; /* Center text on mobile */
+    animation: fadeInLeft 2s ease-out;
+}
+
+header#discipline-section .image-content, section#awareness-section .image-content {
+    max-width: 100%; /* Full width for image content on mobile */
+    margin-top: 20px; /* Add margin-top for spacing */
+}
+
+header#discipline-section .image-content img, section#awareness-section .image-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+header#discipline-section h2, section#awareness-section h2 {
+    font-size: 2em; /* Adjust font size for mobile */
+    margin-bottom: 15px; /* Reduced margin bottom for spacing */
+    animation: slideInLeft 1s ease-out;
+}
+
+header#discipline-section h3, section#awareness-section h3 {
+    margin-top: 20px; /* Adjust margin-top for spacing */
+}
+
+header#discipline-section p, section#awareness-section p {
+    font-size: 14px; /* Adjust font size for mobile */
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+    header#discipline-section, section#awareness-section {
+        padding: 20px 10px; /* Further reduced padding for smaller screens */
+    }
+
+    header#discipline-section h2, section#awareness-section h2 {
+        font-size: 1.8em; /* Adjusted font size for smaller screens */
+    }
+
+    header#discipline-section p, section#awareness-section p {
+        font-size: 12px; /* Adjusted font size for smaller screens */
+    }
+}
+
 
 .form-container {
     position: relative;
@@ -582,7 +1008,7 @@ header#discipline-section.active, section#awareness-section.active {
 .form-group label {
     display: block;
     text-align: left;
-    color: #007bff; /* Blue color for labels */
+    color: #ffffff; /* Blue color for labels */
 }
 
 .form-group input,
@@ -613,31 +1039,87 @@ button:hover {
 
 
 
-.video-background {
-    position: fixed;
-    width: 10vw; /* Set the width to the full viewport width */
-    height: 10vh; /* Set the height to the full viewport height */
-    object-fit: cover; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Ensure the video is behind all other content */
-    overflow: hidden;
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+.form-container {
+    position: relative;
+    z-index: 10;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 50px auto; /* Adjust margin for top spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(100% - 100px); /* Ensure the form is scrollable if it overflows the viewport */
 }
 
-.video-background video {
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.containerqabox h2 {
+    color: #007bff; /* Blue color for headings */
+    text-align: center;
+    font-size: 2em; /* Adjust font size for mobile */
 }
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    text-align: left;
+    color: #ffffff; /* Blue color for labels */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #007bff; /* Blue border */
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px; /* Adjust font size for mobile */
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2aebe1; /* Blue background for buttons */
+    color: rgb(65, 59, 59);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px; /* Adjust font size for mobile */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+    .form-container {
+        padding: 15px; /* Reduced padding for smaller screens */
+        margin: 30px auto; /* Adjusted margin for better spacing */
+    }
+
+    .containerqabox h2 {
+        font-size: 1.8em; /* Adjusted font size for smaller screens */
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 14px; /* Adjusted font size for smaller screens */
+    }
+
+    button {
+        font-size: 14px; /* Adjusted font size for smaller screens */
+    }
+}
+
 .containertop {
-    background-color: #333;
+    background-color: #171c22b2;
 }
 .section-with-background {
     background-image: url('bg_1.jpg');
@@ -647,4 +1129,133 @@ button:hover {
     padding: 50px; /* Adjust padding as needed */
     text-align: center; /* Center content within the section */
     color: #fff; /* Text color for better contrast */
+}
+
+.headline {
+    font-size: 2em; /* Adjust the font size as needed */
+}
+.highlight {
+   color: yellow;
+    font-style: italic; /* Cursive font style */
+    padding: 0 5px; /* Optional: adds some space around the highlighted word */
+}
+#hanging-icon {
+    position: relative;
+    width: 70px; /* Adjust the width as needed */
+    height: 70px; /* Adjust the height as needed */
+    margin: 0 auto;
+}
+
+.rope {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100px; /* Adjust the length of the rope */
+    background: white;
+    transform: translateX(-50%);
+    animation: swing 2s ease-in-out infinite;
+}
+
+.icon1 {
+    position: absolute;
+    bottom: -10;
+    left: 90%;
+    transform: translateX(-50%);
+    width: 300%;
+    height: auto;
+    animation: swing 2s ease-in-out infinite;
+}
+
+@keyframes swing {
+    0%, 100% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    50% {
+        transform: translateX(-50%) rotate(10deg);
+    }
+}
+.enquire-button {
+    display: grid;
+    background-color: #FFD700; /* Yellow background */
+    color: white; /* White text */
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 0 10px 5px rgba(255, 215, 0, 0.6); /* Yellow shine shadow */
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.enquire-button:hover {
+    transform: scale(1.05);
+    color: black;
+}
+.whatsapp {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 1120;
+  }
+  /* Base styles */
+
+
+/* Responsive font sizes */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .schemes-benefits .service {
+        width: 25%; /* Two columns on tablet screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .schemes-benefits .service {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+/* Media Queries for Responsive Design */
+
+@media (max-width: 768px) {
+    .section-with-background {
+        padding: 20px; /* Further reduced padding for smaller screens */
+    }
+
+    .headline {
+        font-size: 1.5em; /* Adjusted font size for smaller screens */
+    }
+
+    .enquire-button {
+        padding: 10px 20px; /* Adjusted padding for smaller screens */
+        font-size: 12px; /* Adjusted font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .section-with-background {
+        padding: 15px; /* Minimal padding for very small screens */
+    }
+
+    .headline {
+        font-size: 1.2em; /* Further reduced font size for very small screens */
+    }
+
+    .rope {
+        height: 60px; /* Adjusted rope length for very small screens */
+    }
+
+    .icon1 {
+        left: 70%; /* Further adjusted left position for very small screens */
+        width: 150%; /* Further adjusted width for very small screens */
+    }
+
+    .enquire-button {
+        padding: 8px 16px; /* Further reduced padding for very small screens */
+        font-size: 10px; /* Further reduced font size for very small screens */
+    }
 }

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secured Loan Benefits</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .goback {
+            text-decoration: none;
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        .title {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        #benefits {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit {
+            margin-bottom: 20px;
+        }
+
+        .toggle {
+            cursor: pointer;
+            background-color: #ddd;
+            color: #333;
+            padding: 10px;
+            margin: 0;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .details {
+            padding: 10px;
+            display: none;
+        }
+
+        .toggle.active {
+            background-color: #5cb85c;
+            color: #fff;
+        }
+
+        .toggle.active .toggle-icon {
+            transform: rotate(45deg);
+        }
+
+        .toggle-icon {
+            transition: transform 0.3s ease;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 5px;
+        }
+
+        .apply-button {
+            display: block;
+            width: 200px;
+            text-align: center;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .apply-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="goback">&larr; Go Back</a>
+        <h1 class="title">Secured Loan</h1>
+    </header>
+
+    <section id="benefits">
+        <div class="benefit">
+            <h2 class="toggle" data-toggle="about">About Secured Loan <span class="toggle-icon">+</span></h2>
+            <div class="details" id="about">
+                <p>A secured loan is a loan provided to a business against collateral, such as property, equipment, or inventory. It offers lower interest rates, higher borrowing limits, and longer repayment terms compared to unsecured loans.</p>
+            </div>
+        </div>
+
+        <div class="benefit">
+            <h2 class="toggle" data-toggle="faq">FAQ <span class="toggle-icon">+</span></h2>
+            <div class="details" id="faq">
+                <p><strong>Q: What is a secured loan?</strong></p>
+                <p>A: A secured loan is backed by collateral, reducing risk for lenders and resulting in lower interest rates for borrowers.</p>
+            </div>
+        </div>
+
+        <div class="benefit">
+            <h2 class="toggle" data-toggle="documents">Required Documents <span class="toggle-icon">+</span></h2>
+            <div class="details" id="documents">
+                <ul>
+                    <li>ID Proof</li>
+                    <li>Address Proof</li>
+                    <li>Collateral Documents</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <a href="index.html#enquiry" class="apply-button">Apply Now with Us</a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggles = document.querySelectorAll('.toggle');
+
+            toggles.forEach(function(toggle) {
+                toggle.addEventListener('click', function() {
+                    const target = this.dataset.toggle;
+                    const details = document.getElementById(target);
+
+                    details.classList.toggle('active');
+                    if (details.style.display === "none" || details.style.display === "") {
+                        details.style.display = "block";
+                    } else {
+                        details.style.display = "none";
+                    }
+
+                    const icon = this.querySelector('.toggle-icon');
+                    icon.textContent = details.style.display === "block" ? '−' : '+';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
