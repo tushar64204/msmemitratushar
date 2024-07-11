@@ -1,56 +1,49 @@
 
 
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
 
 nav ul {
-	list-style: none;
-margin-right: 10PX;
-	padding: 10;
-	display: flex;
-	justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
 }
 
 nav li {
-	margin-right: 20px;
+    margin: 0;
 }
 
 nav a {
-	color: #fff;
-	text-decoration: none;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
 }
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
         align-items: center;
-    }
-    nav {
-        background-color: #333; /* Example background color */
         position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
         padding: 10px;
-        display: flex;
-        justify-content: space-around;
-        z-index: 1000; /* Ensure it's above other content */
+        background-color: #333;
+        z-index: 1000;
     }
-    
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-    }
-    
-    nav li {
-        margin-right: 10px;
-    }
-    
-    nav a {
-        color: #fff;
-        text-decoration: none;
-    }
-    
+
     nav ul {
         flex-direction: row;
     }
@@ -59,35 +52,32 @@ nav a {
         margin-right: 0;
         margin-bottom: 10px;
     }
-}
 
+    nav a {
+        padding: 10px;
+    }
+}
 
 main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
 }
+
 @media (max-width: 768px) {
     main {
         font-size: 14px;
     }
 
     .main {
-        width: 25%; /* Two columns on tablet screens */
+        width: 100%;
     }
 }
-
-@media (max-width: 480px) {
-    .main{
-        width: 100%; /* Full width on smaller screens */
-    }
-}
-
 
 h1, h2, h3 {
-	color: #333;
-	margin-bottom: 10px;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 video {
@@ -792,7 +782,7 @@ body {
 }
 body {
     font-family: Arial, sans-serif;
-    margin: 10;
+    margin: 10px;
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
@@ -801,9 +791,8 @@ body {
 header#discipline-section, section#awareness-section {
     background-color: #0056b3;
     color: #ffffff;
-    padding: 50px 20px;
+  
     display: flex;
-    
     align-items: center;
     justify-content: center;
     text-align: left;
@@ -815,7 +804,7 @@ header#discipline-section .content, section#awareness-section .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 90%;
 }
 
 header#discipline-section .text-content, section#awareness-section .text-content {
@@ -883,101 +872,117 @@ header#discipline-section.active, section#awareness-section.active {
     opacity: 1;
     transform: translateY(0);
 }
+
+
 /* Media Query for Mobile Screens */
 @media (max-width: 768px) {
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
-/* Header and Section Styles */
-header#discipline-section, section#awareness-section {
-    background-color: #0056b3;
-    color: #ffffff;
-    padding: 30px 15px; /* Reduced padding for mobile screens */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    min-height: 100vh; /* Ensure full viewport height */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-header#discipline-section .content, section#awareness-section .content {
-    display: flex;
-    flex-direction: column; /* Stack content vertically on mobile */
-    justify-content: center;
-    align-items: center;
-    width: 100%; /* Full width for mobile screens */
-}
-
-header#discipline-section .text-content, section#awareness-section .text-content {
-    max-width: 100%; /* Full width for text content on mobile */
-    text-align: center; /* Center text on mobile */
-    animation: fadeInLeft 2s ease-out;
-}
-
-header#discipline-section .image-content, section#awareness-section .image-content {
-    max-width: 100%; /* Full width for image content on mobile */
-    margin-top: 20px; /* Add margin-top for spacing */
-}
-
-header#discipline-section .image-content img, section#awareness-section .image-content img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-header#discipline-section h2, section#awareness-section h2 {
-    font-size: 2em; /* Adjust font size for mobile */
-    margin-bottom: 15px; /* Reduced margin bottom for spacing */
-    animation: slideInLeft 1s ease-out;
-}
-
-header#discipline-section h3, section#awareness-section h3 {
-    margin-top: 20px; /* Adjust margin-top for spacing */
-}
-
-header#discipline-section p, section#awareness-section p {
-    font-size: 14px; /* Adjust font size for mobile */
-    line-height: 1.5;
-    margin: 10px 0;
-}
-
-/* Animations */
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-
+    
+    
     header#discipline-section, section#awareness-section {
-        padding: 20px 10px; /* Further reduced padding for smaller screens */
+        background-color: #0056b3;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        min-height: 100vh;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+    
+    header#discipline-section .content, section#awareness-section .content {
+        width: 100%;
+        max-width: 900px;
+        text-align: center;
+    }
+    
+    header#discipline-section .image-content, section#awareness-section .image-content {
+        margin-bottom: 20px;
+    }
+    
+    header#discipline-section .image-content img, section#awareness-section .image-content img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    header#discipline-section h2, section#awareness-section h2 {
+        color: #ffffff;
+        margin-bottom: 20px;
+        font-size: 2.5em;
+        animation: slideInLeft 1s ease-out;
+    }
+    
+    header#discipline-section h3, section#awareness-section h3 {
+        color: #ffffff;
+        margin-top: 30px;
+    }
+    
+    header#discipline-section p, section#awareness-section p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 10px 0;
+        color: #e0e0e0;
+    }
+    
+    /* Animations */
+    @keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    
+    header#discipline-section, section#awareness-section {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+    }
+    
+    header#discipline-section.active, section#awareness-section.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    body {
+        margin: 1px;
+    }
+    header#discipline-section .image-content, section#awareness-section .image-content {
+        align-items: center;
+        width: 60%;
+    }
+    
+    header#discipline-section .image-content img, section#awareness-section .image-content img {
+        border-radius: 10px;
+        align-items: center;
+    }
+    
+    header#discipline-section, section#awareness-section {
+        padding: 10px;
     }
 
     header#discipline-section h2, section#awareness-section h2 {
-        font-size: 1.8em; /* Adjusted font size for smaller screens */
+        font-size: 1em;
+    }
+
+    header#discipline-section h3, section#awareness-section h3 {
+        font-size: 1em;
     }
 
     header#discipline-section p, section#awareness-section p {
-        font-size: 12px; /* Adjusted font size for smaller screens */
+        font-size: 10px;
     }
 }
 
