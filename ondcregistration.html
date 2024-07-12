@@ -106,6 +106,94 @@
   p {
     margin-bottom: 10px;
   }
+  .highlight {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;}
+    
+   .section {
+    margin-bottom: 40px;
+    padding: 20px;
+  }
+  .section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .section p {
+    font-size: 16px;
+  }
+  .image-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .image-container img {
+    max-width: 90%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .banner2 {
+  position: relative;
+  width: 100%; /* Adjust banner width */
+  background-color: #f2f2f2; /* Light gray background */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+.banner-content2 {
+  position: relative;
+  text-align: center;
+  color: #333;
+  padding: 20px;
+}
+
+.banner-content2 h2 {
+  margin-bottom: 10px;
+}
+
+.banner-content2 ol {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.banner-content2 ol li {
+  margin-bottom: 5px;
+}
+
+.banner-content2 p:last-child {
+  margin-top: 10px;
+}
+.business-briefing {
+  max-width: 600px; /* Adjust maximum width */
+  margin: 20px auto; /* Center align and provide some margin */
+  padding: 20px;
+  background-color: #f9f9f9; /* Light gray background */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.business-briefing h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.business-briefing p {
+  margin-bottom: 10px;
+}
+
+.business-briefing a {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+}
+
+.business-briefing a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+
     </style>
 </head>
 <body>
@@ -190,9 +278,61 @@
             </div>
         </div>
     </section>
+    <section class="faq" id="faq">
+    <div class="section">
+        <h2>What does ONDC do?</h2>
+        <p>ONDC (Open Network for Digital Commerce) facilitates a digital marketplace that connects sellers with consumers across various platforms within its network.</p>
+        <div class="image-container">
+          <img src="images/1.png" alt="ONDC Overview Image">
+        </div>
+      </div>
+    
+      <div class="section">
+        <h2>MyStore Listing Process to Sell on ONDC</h2>
+        <p>MyStore provides a platform for sellers to list their products on ONDC. The process involves setting up catalogs and managing orders through a pay-as-you-go model.</p>
+        <div class="image-container">
+          <img src="images/2.png" alt="MyStore Listing Process Image">
+        </div>
+      </div>
+    </section>
+    <section class="section">
+    <h2>ONDC Seller Platform Fees</h2>
+  <p>Yes, it is true that MyStore charges a fee to list catalogs when sellers use it to sell on ONDC. MyStore operates on a pay-as-you-go model where sellers are charged transaction fees for each order. There are no upfront subscription costs, but sellers do incur costs based on the transactions they process through the platform.</p>
+  
+  <div class="highlight">
+    <p>The specific charges include:</p>
+    <ul>
+      <li>A percentage of the order value as a transaction fee.</li>
+      <li>Buyer finder fees, which vary by product category and are typically around 3-5% + GST.</li>
+    </ul>
+    <p>Using MyStore can be cost-effective compared to other platforms as it eliminates hefty subscription fees and allows sellers to list their products across multiple buyer apps within the ONDC network.</p>
+    <!-- Include the link to ecomsprint.com -->
+  <p>For more details, you can visit <a href="https://ecomsprint.com/ondc-seller-platform-mystore-fees/" target="_blank">ecomsprint.com</a>.</p>
+  </div>
+  <div class="banner2">
+    <div class="banner-content2">
+      <h2>ONDC Beta-Live Now!</h2>
+      <p>We invite you to try placing an order on the following buyer applications to test the network:</p>
+      <ol>
+        <li><a href="https://tinyurl.com/PONDC" target="_blank">Paytm – Paytm app required *</a></li>
+        <li><a href="https://shop.mystore.in/en/" target="_blank">Mystore</a></li>
+        <li><a href="https://www.spicesmartshop.com/" target="_blank">Spice Money</a></li>
+        <li><a href="https://www.craftsvilla.com/" target="_blank">Craftsvilla</a></li>
+        <li><a href="https://ondc.meesho.org" target="_blank">Meesho</a></li>
+        <li><a href="https://yaary.in/" target="_blank">Yaary</a></li>
+        <li><a href="https://nammayatri.in/" target="_blank">Namma Yatri</a></li>
+        <li><a href="https://yatrisathi.in/" target="_blank">Yatri Sathi</a></li>
+        <li><a href="https://www.pincode.com/" target="_blank">Pin Code</a></li>
+      </ol>
+      <p>After you have placed your order, please provide your valuable feedback <a href="https://forms.gle/xQoNNiRkE6hfYVkr7" target="_blank">here</a>.</p>
+    </div>
+  </div>
+ 
+</section>
 
+  
     <a href="index.html#enquiry" class="apply-button">Apply Now with Us</a>
-
+ 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const toggles = document.querySelectorAll('.toggle');
