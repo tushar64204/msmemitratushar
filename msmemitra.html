@@ -3,126 +3,217 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Promotional Banner for MSME Mitra</title>
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    height: 100vh;
-    background-color: #f0f0f0;
-  }
-  .banner {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  .banner-big {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffaf01;
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    position: relative;
-  }
-  .banner-big img {
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      background-color: #f0f0f0;
+    }
+  
+    .banner {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .banner-big {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffaf01;
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .banner-big img {
+      max-width: 100px;
+      margin-bottom: 20px;
+    }
+  
+    .banner-big-content {
+      text-align: center;
+    }
+  
+    .banner-small-row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .banner-small {
+      flex: 1 1 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #19fff4;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+  
+    .banner1 {
+      position: relative;
+      width: 100%;
+      height: auto;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+  
+    .banner-content1 {
+      position: relative;
+      text-align: center;
+      color: #333;
+      padding: 20px;
+    }
+  
+    .container {
+      max-width: 90%;
+      margin: 0 auto;
+      overflow: hidden;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+  
+    .content {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .image-container {
+      width: 100%;
+    }
+  
+    .responsive-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  
+    .announcement-bar {
+      background-color: #000000;
+      color: #fdfdfd;
+      padding: 10px;
+      text-align: center;
+      overflow: hidden;
+      text-decoration: none;
+    }
+  
+    .announcement-bar a {
+      color: #fdfdfd;
+      text-decoration: none;
+    }
+  
+    .announcement-bar a:hover {
+      color: #fdfdfd;
+      text-decoration: underline;
+    }
+  
+    .slider {
+      display: flex;
+      animation: slide 20s linear infinite;
+    }
+  
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+  
+    @keyframes slide {
+      0%, 100% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(-100%);
+      }
+    }
+  
+    @media screen and (min-width: 768px) {
+      .banner-big {
+        flex-direction: row;
+        text-align: left;
+      }
+  
+      .banner-big img {
+        margin-right: 20px;
+        margin-bottom: 0;
+      }
+  
+      .banner-small {
+        flex: 1 1 33.33%;
+      }
+    }
+  
+    @media screen and (min-width: 992px) {
+      .banner-small {
+        flex: 1 1 33.33%;
+      }
+    }
+
+  @media screen and (min-width: 992px) {
+    .banner-small {
+      flex: 1 1 calc(25% - 10px);
+    }
+      .banner-big img {
     max-width: 30%;
-    margin-right: 20px;
-  }
-  .banner-big-content {
-    text-align: left;
-    max-width: 70%;
-  }
-  .banner-small-row {
-    flex: 1;
-    display: flex;
-  }
-  .banner-small {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #19fff4;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    padding: 20px;
-  }
- 
-  .banner1 {
-  position: relative;
-  width: 100%; /* Adjust banner width */
-  height: 200px; /* Adjust banner height */
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.banner-content1 {
-  position: relative;
-  text-align: center;
-  color: #333;
-  padding: 20px;
-}
-
-.moving-symbol {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  z-index: -1;
-  animation: moveSymbol 8s linear infinite;
-}
-
-.moving-symbol.yellow {
-  background-color: yellow;
-}
-
-@keyframes moveSymbol {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(calc(100% - 100vw)); /* Moves exactly 100% of its own width minus 100% of viewport width */
-  }
-}
-
-.container {
-    max-width: 90%;
-    margin: 0 auto;
-    overflow: hidden; /* Ensures image doesn't overflow container */
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.content {
-    float: left;
-    width: 60%; /* Adjust as needed */
-}
-
-.image-container {
-    float: right;
-    width: 40%; /* Adjust as needed */
-}
-
-.responsive-image {
-    width: 100%;
     height: auto;
-    display: block;
-}
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+  }
 
-</style>
+  .banner-big-content {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  }
+  @media screen and (min-width: 768px) {
+    .banner-big {
+      display: flex;
+      align-items: center;
+      text-align: left;
+      padding: 20px;
+    }
+    .banner-big img {
+    max-width: 30%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+  }
+
+  .banner-big-content {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+    .banner-big img {
+      max-width: 100px;
+      margin-right: 20px;
+    }
+
+    .banner-small {
+      flex: 1 1 calc(33.33% - 10px);
+    }
+
+    .banner-small:last-child {
+      margin-right: 0;
+    }
+  }
+  </style>
 </head>
 <body>
   <div class="banner">
@@ -134,120 +225,56 @@
         <p>Contact us at <strong>msmemitratushar@gmail.com</strong> for more information.</p>
       </div>
     </div>
-    <style>
-
-
-        .announcement-bar {
-          background-color: #000000;
-          color: #fdfdfd;
-          padding: 10px;
-          line-break: white;
-          text-align: center;
-          overflow: hidden;
-         
-          text-decoration: none;
-        }
-        .announcement-bar a {
-    color: #fdfdfd;
-    text-decoration: none;
-}
-
-.announcement-bar a:hover {
-    color: #fdfdfd;
-    text-decoration: underline;
-}
-
-        .slider {
-          display: flex;
-          animation: slide 20s linear infinite;
-        }
-        
-        .slide {
-          min-width: 100%;
-          box-sizing: border-box;
-        }
-        
-        @keyframes slide {
-          0%, 100% {
-              transform: translateX(0);
-          }
-          25% {
-              transform: translateX(0);
-          }
-          50% {
-              transform: translateX(-100%);
-          }
-          75% {
-              transform: translateX(-100%);
-          }
-        }
-        </style>
-        
-        <div class="announcement-bar">
-          <div class="slider">
-            
-              <div class="slide"><a href="ondcregistration.html" target="_blank"> 📢New ONDC Feature!📌100% Free: Now all sellers can sell online!📌</a></div>
-              <div class="slide"><a href="index.html#contact" target="_blank"> 🥇MSME Mitra can assist you at zero cost📌</a></div>
-          </div>
-        </div>
-        
-
-    <div class="banner1">
-        <div class="banner-content1">
-          <h2>New ONDC Feature!</h2>
-          <p>Now all sellers can sell online with just GST and a canceled check photo. Your store will be live on your own website at no cost.</p>
-          <p>MSME Mitra can assist you at zero cost, providing training on how to sell, manage, and deliver orders.</p>
-        </div>
+    <div class="announcement-bar">
+      <div class="slider">
+        <div class="slide"><a href="ondcregistration.html" target="_blank"> 📢New ONDC Feature!📌100% Free: Now all sellers can sell online!📌</a></div>
+        <div class="slide"><a href="index.html#contact" target="_blank"> 🥇MSME Mitra can assist you at zero cost📌</a></div>
       </div>
-      
-      
-
-
-      <div class="banner-small-row">
-        <div class="banner-small" style="background-color: #00C4CC;">
-            <p>Duty 1: Connect MSMEs with government schemes</a></p>
-        </div>
-        <div class="banner-small" style="background-color: #A548FF;">
-            <p>Duty 2: Facilitate financial (loan) assistance</a></p>
-        </div>
-        <div class="banner-small" style="background-color: #6422B8;">
-            <p>Duty 3: Assist in technology adoption (Sell Online) </a></p>
-        </div>
+    </div>
+    <div class="banner1">
+      <div class="banner-content1">
+        <h2>New ONDC Feature!</h2>
+        <p>Now all sellers can sell online with just GST and a canceled check photo. Your store will be live on your own website at no cost.</p>
+        <p>MSME Mitra can assist you at zero cost, providing training on how to sell, manage, and deliver orders.</p>
+      </div>
     </div>
     <div class="banner-small-row">
-        <div class="banner-small" style="background-color: #FF738E;">
-            <p><a href="https://www.cgtmse.in/Default/ViewFile/?id=1639653907010_CGTMSE%20-%20Scheme%20Document%20CGS%20I_updated%20as%20on%20December%202021.pdf&path=Page"> (CGT SME Scheme) Collateral free loan up to a limit of ₹ 100 lakh</a></p>
-        </div>
-        <div class="banner-small" style="background-color: #FFA53B;">
-            <p><a href="https://msme.gov.in/sites/default/files/MSMESchemebooklet2024.pdf"> Connect MSMEs with government schemes</a></p>
-        </div>
-        <div class="banner-small" style="background-color: #FFD93B;">
-            <p><a href="https://udyamregistration.gov.in/Government-India/Ministry-MSME-registration.htm">Udyam Registration</a></p>
-        </div>
-
-    
-      <div class="container">
-        <div class="content">
-            <h2>Udyam Registration</h2>
-            <p>
-                Udyam Registration is the new online process for MSME registration introduced by the Government of India. It offers several benefits to small and medium enterprises.
-            </p>
-            <h3>Benefits of Udyam Registration:</h3>
-            <ul>
-                <li>Easy access to credit and loans from banks and financial institutions</li>
-                <li>Subsidies on power, taxes, and entry to state-run industrial estates</li>
-                <li>Protection against delay in payment from buyers and right of interest on delayed payment</li>
-                <li>Reservation in manufacturing/production of goods especially for exclusive manufacturing by MSMEs</li>
-                <li>Preference in Government sector purchases</li>
-            </ul>
-        </div>
-        <div class="image-container">
-            <img src="images/image.png" alt="Udyam Registration" class="responsive-image">
-        </div>
+      <div class="banner-small" style="background-color: #00C4CC;">
+        <p>Duty 1: Connect MSMEs with government schemes</p>
+      </div>
+      <div class="banner-small" style="background-color: #A548FF;">
+        <p>Duty 2: Facilitate financial (loan) assistance</p>
+      </div>
+      <div class="banner-small" style="background-color: #6422B8;">
+        <p>Duty 3: Assist in technology adoption (Sell Online)</p>
+      </div>
+      <div class="banner-small" style="background-color: #FF738E;">
+        <p><a href="https://www.cgtmse.in/Default/ViewFile/?id=1639653907010_CGTMSE%20-%20Scheme%20Document%20CGS%20I_updated%20as%20on%20December%202021.pdf&path=Page" style="color: #fff;">(CGT SME Scheme) Collateral free loan up to a limit of ₹ 100 lakh</a></p>
+      </div>
+      <div class="banner-small" style="background-color: #FFA53B;">
+        <p><a href="https://msme.gov.in/sites/default/files/MSMESchemebooklet2024.pdf" style="color: #fff;">Connect MSMEs with government schemes</a></p>
+      </div>
+      <div class="banner-small" style="background-color: #FFD93B;">
+        <p><a href="https://udyamregistration.gov.in/Government-India/Ministry-MSME-registration.htm" style="color: #fff;">Udyam Registration</a></p>
+      </div>
     </div>
-    
+    <div class="container">
+      <div class="content">
+        <h2>Udyam Registration</h2>
+        <p>Udyam Registration is the new online process for MSME registration introduced by the Government of India. It offers several benefits to small and medium enterprises.</p>
+        <h3>Benefits of Udyam Registration:</h3>
+        <ul>
+          <li>Easy access to credit and loans from banks and financial institutions</li>
+          <li>Subsidies on power, taxes, and entry to state-run industrial estates</li>
+          <li>Protection against delay in payment from buyers and right of interest on delayed payment</li>
+          <li>Reservation in manufacturing/production of goods especially for exclusive manufacturing by MSMEs</li>
+          <li>Preference in Government sector purchases</li>
+        </ul>
+      </div>
+      <div class="image-container">
+        <img src="images/image.png" alt="Udyam Registration" class="responsive-image">
+      </div>
     </div>
   </div>
-
 </body>
 </html>

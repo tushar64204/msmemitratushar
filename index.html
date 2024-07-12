@@ -166,7 +166,12 @@
 		
     </header>
 	
-		
+	<div class="announcement-bar">
+		<div class="slider">
+			<div class="slide"><a href="ondcregistration.html" target="_blank"> 📢 New ONDC Feature! 📌 100% Free: Now all sellers can sell online! 📌</a></div>
+			<div class="slide"><a href="index.html#contact" target="_blank"> 🥇 MSME Mitra can assist you at zero cost 📌</a></div>
+		</div>
+	</div>
 	
 
 	
@@ -182,117 +187,106 @@
 			<p>Your partner in growth</p>
 			</section>
 			<style>
-
-
 				.announcement-bar {
-				  background-color: #000000;
-				  color: #fdfdfd;
-				  padding: 10px;
-				  line-break: white;
-				  text-align: center;
-				  overflow: hidden;
-				 
-				  text-decoration: none;
+					background-color: #000000;
+					color: #fdfdfd;
+					padding: 10px;
+					text-align: center;
+					overflow: hidden;
 				}
+			
 				.announcement-bar a {
-			color: #fdfdfd;
-			text-decoration: none;
-		}
-		
-		.announcement-bar a:hover {
-			color: #fdfdfd;
-			text-decoration: underline;
-		}
-		
+					color: #fdfdfd;
+					text-decoration: none;
+				}
+			
+				.announcement-bar a:hover {
+					text-decoration: underline;
+				}
+			
 				.slider {
-				  display: flex;
-				  animation: slide 20s linear infinite;
+					display: flex;
+					animation: slide 20s linear infinite;
 				}
-				
+			
 				.slide {
-				  min-width: 100%;
-				  box-sizing: border-box;
+					min-width: 100%;
+					box-sizing: border-box;
 				}
-				
+			
 				@keyframes slide {
-				  0%, 100% {
-					  transform: translateX(0);
-				  }
-				  25% {
-					  transform: translateX(0);
-				  }
-				  50% {
-					  transform: translateX(-100%);
-				  }
-				  75% {
-					  transform: translateX(-100%);
-				  }
+					0%, 100% {
+						transform: translateX(0);
+					}
+					25% {
+						transform: translateX(0);
+					}
+					50% {
+						transform: translateX(-100%);
+					}
+					75% {
+						transform: translateX(-100%);
+					}
 				}
-				</style>
-				
-				<div class="announcement-bar">
-				  <div class="slider">
-					
-					  <div class="slide"><a href="ondcregistration.html" target="_blank"> 📢New ONDC Feature!📌100% Free: Now all sellers can sell online!📌</a></div>
-					  <div class="slide"><a href="index.html#contact" target="_blank"> 🥇MSME Mitra can assist you at zero cost📌</a></div>
-				  </div>
-				</div>
-				
-			<section class="msme-profile">
-				<style>
-					
-				  
-					.Floatingcontainer {
-					  position: relative;
-					  width: 100%;
-					  height: 100px; /* Adjust container height as needed */
-					  
-					}
-				  
-					/* Floating Animation */
-					.floatingAnimation {
-					  position: absolute;
-					  bottom: 0; /* Adjust the position of the floating element relative to the container */
-					  left: 70%; /* Position floating element horizontally in the center of the container */
-					  transform: translateX(-50%);
-					  animation: floatAnimation 3s ease-in-out infinite alternate; /* Adjust animation properties */
-					}
-				  
-					@keyframes floatAnimation {
-					  0% {
+			
+				.msme-profile .Floatingcontainer {
+					position: relative;
+					width: 100%;
+					height: 100px; /* Adjust container height as needed */
+				}
+			
+				.msme-profile .floatingAnimation {
+					position: absolute;
+					bottom: 0;
+					left: 50%; /* Adjust floating element position horizontally */
+					transform: translateX(-50%);
+					animation: floatAnimation 3s ease-in-out infinite alternate;
+				}
+			
+				@keyframes floatAnimation {
+					0% {
 						transform: translateY(0);
-					  }
-					  100% {
-						transform: translateY(-20px); /* Adjust floating distance */
-					  }
 					}
-					@media (max-width: 720px) {
-						.Floatingcontainer {
-							position: relative;
-							width: 25%;
-							height: 100px; /* Adjust container height as needed */
-							
-						}
-						@media (max-width: 300px) {
-						.Floatingcontainer {
-							position: relative;
-							width: 25%;
-							height: 100px; /* Adjust container height as needed */
-							
-						}
-
-						
-					}}
-				  </style>
-				  
-				  <div class="Floatingcontainer">
-					<div id="date-time"></div>
+					100% {
+						transform: translateY(-20px); /* Adjust floating distance */
+					}
+				}
+			
+				@media (min-width: 721px) {
+					.msme-profile .floatingAnimation img {
+						width: 40%; /* Adjust image width for desktop screens */
+					}
+				}
+			
+				@media (max-width: 720px) {
+					.announcement-bar {
+						font-size: 0.8em; /* Adjust font size for smaller screens */
+					}
+			
+					.msme-profile .Floatingcontainer {
+						height: 80px; /* Adjust container height for smaller screens */
+					}
+				}
+			
+				@media (max-width: 480px) {
+					.msme-profile .Floatingcontainer {
+						height: 60px; /* Further adjust container height for smaller screens */
+					}
+				}
+			</style>
+			
+			
+			
+			<section class="msme-profile">
+				<div class="Floatingcontainer">
+					
 					<div class="floatingAnimation">
-					  <!-- Floating animation element -->
-					  <img src="images/fre.png" width="60%" alt="Floating Animation">
+						<img src="images/fre.png" width="60%" alt="Floating Animation">
 					</div>
-				  </div>
-				  
+				</div>
+			</section>
+			
+			<section class="msme-profile">
 				<div class="container">
 					<div class="profile-header">
 						
@@ -302,7 +296,7 @@
             cursor: pointer;
             width: 100px; /* Adjust size as needed */
             height: auto;
-            border-radius: 30%;
+            border-radius: 50%;
         }
 
         /* The Modal (background) */
