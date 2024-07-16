@@ -1264,3 +1264,58 @@ button:hover {
         font-size: 10px; /* Further reduced font size for very small screens */
     }
 }
+.announcement {
+    padding: 20px;
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    margin: 20px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.announcement h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.announcement p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.announcement .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    animation: pulse 1.5s infinite;
+}
+
+.announcement .cta-button:hover {
+    background-color: #e67e22;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
