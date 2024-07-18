@@ -118,27 +118,12 @@ footer a:hover {
                 <li><strong>Print Invoice:</strong> An option for customers to print their invoices for their records.</li>
             </ul>
         </section>
-        <section>
+      
+        
             <h2>Pricing</h2>
-            <p>The cost of creating a digital menu card with UPI payment options depends on several factors such as the complexity of the menu, the number of items, design requirements, and integration with existing systems. Here is a rough estimate:</p>
-            <ul>
-                <li><strong>Basic Menu Card (up to 50 items):</strong> ₹5,000 - ₹10,000</li>
-                <li><strong>Medium-Complexity Menu Card (50-100 items):</strong> ₹10,000 - ₹20,000</li>
-                <li><strong>Advanced Menu Card (100+ items, custom design, animations):</strong> ₹20,000 - ₹50,000</li>
-            </ul>
-            <p><strong>Additional Services:</strong></p>
-            <ul>
-                <li><strong>UPI Payment Gateway Integration:</strong> ₹2,000 - ₹5,000</li>
-                <li><strong>Mobile Optimization:</strong> ₹1,000 - ₹3,000</li>
-                <li><strong>Maintenance and Updates (optional):</strong> ₹1,000 - ₹5,000 per month</li>
-            </ul>
-        </section>
-        <section>
             <h2>Special Limited Time Offer</h2>
             <p><strong>50% Discount:</strong> For a limited time, we are offering a 50% discount on all services. Don't miss this opportunity to enhance your business at half the cost!</p>
-        </section>
-        <section>
-            <h2>Pricing</h2>
+        <p><strong>Free Consultation:</strong> We offer a free consultation to help you</p>
             <p>The cost of creating a digital menu card with UPI payment options depends on several factors such as the complexity of the menu, the number of items, design requirements, and integration with existing systems. Here is a rough estimate:</p>
             <ul>
                 <li><strong>Basic Menu Card (up to 50 items):</strong> <span class="old-price">₹5,000 - ₹10,000</span> ₹2,500 - ₹5,000</li>
@@ -152,6 +137,134 @@ footer a:hover {
                 <li><strong>Maintenance and Updates (optional):</strong> <span class="old-price">₹1,000 - ₹5,000 per month</span> ₹500 - ₹2,500 per month</li>
             </ul>
         </section>
+        <style>
+            .offer-section {
+                background: linear-gradient(to right, #4CAF50, #8BC34A);
+                color: white;
+                padding: 20px;
+                border-radius: 10px;
+                text-align: center;
+                font-family: Arial, sans-serif;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                margin: 20px;
+            }
+            .offer-section h2 {
+                font-size: 2.5em;
+                margin-bottom: 10px;
+            }
+            .offer-section p {
+                font-size: 1.2em;
+                margin-bottom: 20px;
+            }
+            .offer-section ul {
+                list-style: none;
+                padding: 0;
+                font-size: 1em;
+            }
+            .offer-section ul li {
+                background: rgba(255, 255, 255, 0.1);
+                margin: 10px 0;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            .highlight {
+                font-weight: bold;
+                color: #FFD700;
+            }
+            .payment-content {
+                display: none;
+                margin-top: 20px;
+                text-align: left;
+                background: white;
+                color: black;
+                padding: 20px;
+                border-radius: 10px;
+            }
+            .payment-content label {
+                font-size: 1em;
+                display: block;
+                margin-bottom: 10px;
+            }
+            #qrcode {
+                text-align: center;
+                margin-top: 10px;
+            }
+            .upi-link {
+                display: block;
+                text-align: center;
+                margin-top: 20px;
+                font-size: 1.2em;
+                color: #4CAF50;
+                text-decoration: none;
+            }
+        </style>
+<section class="offer-section">
+    <h2>New Service Launch: Limited Time Special Offers Await!</h2>
+    <p>Get All Benefits at just <span class="highlight">₹2,500</span> with one month free service. We will maintain your catalogue during the month at no cost.</p>
+    <p>What you get? You will receive the following services at ₹2,500:</p>
+    <ul>
+        <li>Digital UPI enabled menu card</li>
+        <li>Send us item details on WhatsApp and we will make your catalogue (up to 50 items)</li>
+        <li>Send us your logo, restaurant name, and contact details, and we will add them to your catalogue</li>
+        <li>Send us your WhatsApp number, and we will send you order details on WhatsApp</li>
+        <li>Send us your UPI ID, and we will add it to your catalogue</li>
+    </ul>
+    <p>(After one month service, a nominal charge for maintenance of ₹20/day is collected at the month end. These charges help cover hosting and other services costs.)</p>
+    <p> We will add, delete, or change up to 3 items daily for you.</p>
+    <button onclick="toggleContent()">Proceed to Payment</button>
+    
+    <div class="payment-content">
+        <h3>Select Payment Method</h3>
+        <label>
+            <input type="radio" name="paymentMethod" value="UPI"> UPI APP
+        </label>
+       
+        
+        <div id="upiDetails" style="display: none;">
+          
+            <a id="upiLink" class="upi-link" href="#" target="_blank">Pay via UPI app in Mobile</a>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    // Function to toggle the hidden payment content
+    function toggleContent() {
+        const hiddenContent = document.querySelector('.payment-content');
+        hiddenContent.style.display = hiddenContent.style.display === 'none' ? 'block' : 'none';
+    }
+
+    // Listen for changes in the payment method selection
+    document.querySelectorAll('input[name="paymentMethod"]').forEach((elem) => {
+        elem.addEventListener("change", function(event) {
+            const upiDetails = document.getElementById('upiDetails');
+            if (event.target.value === 'UPI') {
+                upiDetails.style.display = 'block';
+                generateQRCode();
+            } else {
+                upiDetails.style.display = 'none';
+            }
+        });
+    });
+
+    // Generate the QR code for UPI payment
+    function generateQRCode() {
+        const upiId = '9992659320@ybl';
+        const amount = '2500';
+        const transactionNote = 'Payment for Offer';
+        const qrData = `upi://pay?pa=${upiId}&pn=PaperPalace&am=${amount}&tn=${transactionNote}`;
+        document.getElementById('upiLink').href = qrData;
+
+        const qrcode = new QRCode(document.getElementById('qrcode'), {
+            text: qrData,
+            width: 200,
+            height: 200,
+        });
+    }
+</script>
+
+  
         
         <section>
             <h2>Who Can Benefit?</h2>
@@ -171,6 +284,15 @@ footer a:hover {
             <p>We would love to discuss this proposal further and understand your specific needs. Please feel free to contact us at msmemitratushar@gmail.com to schedule a meeting or to ask any questions.</p>
             <p>Thank you for considering our digital menu card service. We look forward to the opportunity to work with you and contribute to the success of your business.</p>
         </section>
+        <div class="service">
+            <div class="service-icon">
+               
+            </div>
+            <p>Lets understand digitalmenucard benifits</p>
+            <div class="video-frame">
+                <iframe src="https://www.youtube.com/embed/4k6ieGEPKRg?si=oPioEjThHAcnfvdk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
         <footer>
             <p>Best regards,</p>
             <p>Tushar<br>
@@ -179,6 +301,8 @@ footer a:hover {
                (MSMEs with GST and udhyam ragistration can get  this service at zero cost)
                </p>
             <p>Check out our prototype for these services with a stationery shop example: <a href="https://jatayucopyhouse.netlify.app" target="_blank">View Prototype</a></p>
+            <p>Check out our prototype for these services with a Restaurant DigiMenu with UPI payment and whatsapp order <a href="https://shabaridelights.netlify.app/" target="_blank">View Prototype</a></p>
+            
         </footer>
     </div>
     <script src="script.js"></script>
